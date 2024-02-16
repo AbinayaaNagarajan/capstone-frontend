@@ -1,0 +1,411 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page, .main-layout, .student-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  height: 1000px;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  overflow: hidden;}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  color: #EAD012;
+}
+
+.sidebar a:active {
+  color: #EAD012;
+}
+
+
+/* styles.css */
+
+/*Slider*/
+.banner-slider {
+  width: 100%;
+  max-width: 1050px; 
+  margin: 0 auto;
+  position: relative;
+  left: -35px;
+  top:55px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-slide img {
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -50px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  font-size: 12px;
+  line-height: 1;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.slick-dots button:hover,
+.slick-dots button.slick-active {
+  background-color: #EAD012;
+}
+
+
+.slick-prev, .slick-next {
+  font-size: 24px;
+  line-height: 1;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* News Section */
+.news-section {
+  margin-top: 20px;
+}
+
+.news-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.news-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  width:360px;
+}
+
+.news-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color:#000;
+}
+
+.news-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* styles.css */
+
+/* Student Page */
+
+.student-page {
+  width: 850px;
+  left:30px;
+  position: relative;
+}
+
+/* Add Student Form */
+.add-student-form {
+  max-width: 100%; 
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.add-student-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.add-student-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  background-color: #000;
+}
+.add-student-form h3{
+  color:#000;
+}
+.add-student-form button {
+  background-color:#EAD012;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-student-form button:hover {
+  background-color: #45a049;
+}
+.add-student-form select{
+  background-color: #000;
+  width:100px;
+  margin: 0 15px 0 0;
+  height: 35px;
+}
+/* List of Students */
+.student-list {
+  max-width: 100%; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.student-list h3{
+  color:#000;
+}
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+.student-name {
+  font-weight: bold;
+}
+
+.student-grade {
+  color: #555;
+  margin-left: 10px;
+}
+
+.student-item button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-item button:hover {
+  background-color: #c0392b;
+}
+
+/* styles.css */
+
+/* Contact Us Page */
+.contact-us-layout {
+  display: flex;
+}
+
+.contact-us-page {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+.contact-us-page h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Contact Us Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #000;
+}
+
+button {
+  background-color: #EAD012;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* styles.css */
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Signup Page */
+.signup-layout {
+  display: flex;
+}
+
+.signup-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.signup-page h2 {
+  color: #fff;
+}
+
+.signup-page form {
+  display: flex;
+  flex-direction: column;
+  color:#fff;
+}
+
+.signup-page label {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.signup-page input {
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.signup-page button {
+  background-color: #EAD012;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-page button:hover {
+  background-color: #45a049;
+}
+
+
+/* AttendancePage.css */
+.page-container {
+  display: flex;
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color:#fff;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
