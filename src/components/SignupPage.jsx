@@ -20,19 +20,48 @@ const SignupPage = () => {
     });
   };
 
-  const handleEnroll = (e) => {
-    e.preventDefault();
 
-    // Send a POST request to add a new student
-    Axios.post('http://localhost:3000/students/addStudent', formData)
-      .then((response) => {
-        console.log('Student added successfully:', response.data);
-        // You can redirect or handle success as needed
-      })
-      .catch((error) => {
-        console.error('Error adding student:', error);
-      });
-  };
+
+  // const handleAddStudent = async() => {
+  //   console.log(newStudent);
+  //   // Send a POST request to add a new student
+  //   try{
+  // const response = await Axios.post('http://localhost:3000/students/addStudent', newStudent);
+  // console.log(response);
+  // setStudents([...students, response.data]); // Update the students list with the new student
+  // setNewStudent({ name: '', grade: '' , batch: ''}); // Clear the input fields
+  //   }catch(error){
+  //       console.error('Error adding student:', error);
+  //     }
+  // };
+
+const handleEnroll = async() =>{
+  console.log();
+  try{
+    const response = await Axios.post('http://localhost:3000/students/addStudent', newStudent);
+    setStudents([...students, response.data]); // Update the students list with the new student
+    setNewStudent({ username: '',password:'', grade: '' , studentName: ''}); // Clear the input fields
+    console.log(response);
+
+  }catch(error){
+    console.error('Error adding student:', error);
+  }
+
+};
+
+  // const handleEnroll = (e) => {
+  //   e.preventDefault();
+
+  //   // Send a POST request to add a new student
+  //   Axios.post('http://localhost:3000/students/addStudent', formData)
+  //     .then((response) => {
+  //       console.log('Student added successfully:', response.data);
+  //       // You can redirect or handle success as needed
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error adding student:', error);
+  //     });
+  // };
 
   return (
     <div className="signup-layout">

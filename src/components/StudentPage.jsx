@@ -7,40 +7,45 @@ import Sidebar from './Sidebar';
 const StudentPage = () => {
   const [students, setStudents] = useState([]);
   const [newStudent, setNewStudent] = useState({ name: '', grade: '', batch:'' });
-  const batchOptions = ['Batch 1', 'Batch 2', 'Batch 3'];
+  const batchOptions = [ 1,  2,  3];
 
-  useEffect(() => {
+  useEffect(  () => {
+    async function fetchData(){
+    try{
     // Fetch all students from the backend upon component mount
-    Axios.get('https://localhost:3000/students/')
-      .then((response) => {
-        setStudents(response.data);
-      })
-      .catch((error) => {
+   const response = await Axios.get('http://localhost:3000/students/getAllStudent')
+   console.log ("Line17", response.data);
+   setStudents(response.data);
+    }catch(error) {
         console.error('Error fetching students:', error);
-      });
+      };
+    }
+    fetchData();
   }, []);
 
-  const handleAddStudent = () => {
+  const handleAddStudent = async() => {
+    console.log(newStudent);
     // Send a POST request to add a new student
-    Axios.post('http://localhost:3000/students/addStudent', newStudent)
-      .then((response) => {
-        setStudents([...students, response.data]); // Update the students list with the new student
-        setNewStudent({ name: '', grade: '' , batch: ''}); // Clear the input fields
-      })
-      .catch((error) => {
+    try{
+  const response = await Axios.post('http://localhost:3000/students/addStudent', newStudent);
+  console.log(response);
+  setStudents([...students, response.data]); // Update the students list with the new student
+  setNewStudent({ name: '', grade: '' , batch: ''}); // Clear the input fields
+    }catch(error){
         console.error('Error adding student:', error);
-      });
+      }
   };
 
-  const handleRemoveStudent = (studentId) => {
+  const handleRemoveStudent = async (studentId) => {
+    console.log();
+    try{
     // Send a DELETE request to remove a student
-    Axios.delete(`http://localhost:3000/students/${studentId}`)
-      .then(() => {
-        setStudents(students.filter((student) => student._id !== studentId)); // Update the students list
-      })
-      .catch((error) => {
+    const response = await Axios.delete(`http://localhost:3000/students/deleteStudent/${studentId}`);
+    console.log(response);
+    setStudents(students.filter((student) => student._id !== studentId)); // Update the students list
+    }catch(error){
         console.error('Error removing student:', error);
-      });
+      }
   };
 
   return (
@@ -92,8 +97,9 @@ const StudentPage = () => {
             {students.map((student) => (
               <li key={student._id} className="student-item">
                 <div>
-                  <span className="student-name">{student.name}</span>
+                  <span className="student-name">Name: <i>{student.name}</i></span>
                   <span className="student-grade">Grade: {student.grade}</span>
+                  <span className="student-batch">Batch: {student.batch}</span>
                 </div>
                 <button onClick={() => handleRemoveStudent(student._id)}>Remove</button>
               </li>

@@ -1,12 +1,12 @@
 /* styles.css */
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: #000;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .home-page, .main-layout, .student-layout {
@@ -51,16 +51,17 @@ body {
 }
 
 
+
 /* styles.css */
 
 /*Slider*/
 .banner-slider {
-  width: 100%;
+  width: 1050px;
   max-width: 1050px; 
   margin: 0 auto;
   position: relative;
-  left: -35px;
-  top:55px;
+  left: -15px;
+  top:300px;
 }
 
 .slick-slide {
@@ -131,6 +132,15 @@ body {
   right: 10px;
 }
 
+/* About me Section */
+
+.about-me-section{
+
+    width: 990px;
+    position: absolute;
+    left: 255px;
+    height: 350px;
+}
 /* News Section */
 .news-section {
   margin-top: 20px;
@@ -223,6 +233,8 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  max-height: 500px;
+  overflow: auto;
 }
 .student-list h3{
   color:#000;
@@ -241,13 +253,20 @@ body {
 
 .student-name {
   font-weight: bold;
+  color:#000;
+  
 }
 
 .student-grade {
-  color: #555;
-  margin-left: 10px;
+  font-weight: bold;
+  color: #000;
+  margin-left: 50px;
 }
-
+.student-batch{
+  font-weight: bold;
+  color:#000;
+  margin-left: 50px;
+}
 .student-item button {
   background-color: #e74c3c;
   color: #fff;

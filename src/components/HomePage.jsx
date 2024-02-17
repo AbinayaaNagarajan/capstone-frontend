@@ -15,8 +15,9 @@ const HomePage = () => {
         
 
         {/* Static Slider */}
+        <AboutMe />
         <Slider />
-
+        
 
         {/* News Section */}
         <NewsSection />

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import axios from 'axios';
+import CryptoJS from 'crypto-js';
 
 const AttendancePage = () => {
   const [attendanceData, setAttendanceData] = useState({
@@ -20,12 +21,20 @@ const AttendancePage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/attendances/saveAttendance', attendanceData);
-
-      if (response.status === 201) {
+      const response = await axios.post('http://localhost:3000/attendance/saveAttendance', attendanceData , 
+      {
+        headers: {
+          // Request headers
+          'auth': 'mypassword'
+        }
+      }
+      );
+      console.log(response);
+      if (response.status === 200) {
         console.log('Attendance recorded successfully');
         // You can perform additional actions here, such as redirecting or updating UI
       } else {
+
         console.error('Failed to record attendance');
       }
     } catch (error) {
