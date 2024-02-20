@@ -27,7 +27,7 @@ const StudentPage = () => {
     console.log(newStudent);
     // Send a POST request to add a new student
     try{
-  const response = await Axios.post('http://localhost:3000/students/addStudent', newStudent);
+  const response = await Axios.post('https://tutor-student.onrender.com/students/addStudent', newStudent);
   console.log(response);
   setStudents([...students, response.data]); // Update the students list with the new student
   setNewStudent({ name: '', grade: '' , batch: ''}); // Clear the input fields
