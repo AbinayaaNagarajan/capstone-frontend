@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import axios from 'axios';
-import CryptoJS from 'crypto-js';
+//import CryptoJS from 'crypto-js';
 
 const AttendancePage = () => {
   const [attendanceData, setAttendanceData] = useState({
@@ -11,6 +11,8 @@ const AttendancePage = () => {
     month: '',
     status: '',
   });
+
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +33,13 @@ const AttendancePage = () => {
       );
       console.log(response);
       if (response.status === 200) {
-        console.log('Attendance recorded successfully');
+        setSuccessMessage('Attendance recorded successfully');
+        setAttendanceData({
+          name: '',
+          date: '',
+          month: '',
+          status: '',
+        });
         // You can perform additional actions here, such as redirecting or updating UI
       } else {
 
@@ -65,6 +73,7 @@ const AttendancePage = () => {
             <input type="text" name="status" value={attendanceData.status} onChange={handleInputChange} />
           </label>
           <button type="submit">Submit Attendance</button>
+          {successMessage && <p className="success-message">{successMessage}</p>}
         </form>
       </div>
     </div>

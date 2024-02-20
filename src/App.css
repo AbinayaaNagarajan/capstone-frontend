@@ -451,10 +451,6 @@ button:hover {
   display: flex;
 }
 
-.sidebar {
-  /* Add your sidebar styling here */
-}
-
 .content {
   flex-grow: 1;
   padding: 20px;
@@ -517,4 +513,8 @@ button {
   position: absolute;
   top:100px;
   left:170px;
+}
+
+.success-message{
+  color:#000;
 }
