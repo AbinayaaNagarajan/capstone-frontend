@@ -9,7 +9,6 @@ const Sidebar = () => {
         <li><NavLink to="/" className="active">Home</NavLink></li>
         <li><NavLink to="/students" className="active">Students</NavLink></li>
         <li><NavLink to="/contact" className="active">Contact Us</NavLink></li>
-        <li><NavLink to="/signup" className="active">Signup</NavLink></li>
         <li><NavLink to="/attendance" className="active">Attendance</NavLink></li>
       </ul>
     </div>
