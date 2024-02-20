@@ -23,7 +23,7 @@ const AttendancePage = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/attendance/saveAttendance', attendanceData , 
+      const response = await axios.post('https://tutor-student.onrender.com/attendance/saveAttendance', attendanceData , 
       {
         headers: {
           // Request headers

@@ -13,7 +13,7 @@ const StudentPage = () => {
     async function fetchData(){
     try{
     // Fetch all students from the backend upon component mount
-   const response = await Axios.get('http://localhost:3000/students/getAllStudent')
+   const response = await Axios.get('https://tutor-student.onrender.com/students/getAllStudent')
    console.log ("Line17", response.data);
    setStudents(response.data);
     }catch(error) {
@@ -40,7 +40,7 @@ const StudentPage = () => {
     console.log();
     try{
     // Send a DELETE request to remove a student
-    const response = await Axios.delete(`http://localhost:3000/students/deleteStudent/${studentId}`);
+    const response = await Axios.delete(`https://tutor-student.onrender.com/students/deleteStudent/${studentId}`);
     console.log(response);
     setStudents(students.filter((student) => student._id !== studentId)); // Update the students list
     }catch(error){
