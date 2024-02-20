@@ -6,10 +6,10 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li><NavLink to="/" className="active">Home</NavLink></li>
-        <li><NavLink to="/students" className="active">Students</NavLink></li>
-        <li><NavLink to="/contact" className="active">Contact Us</NavLink></li>
-        <li><NavLink to="/attendance" className="active">Attendance</NavLink></li>
+        <li><NavLink to="/" exact >Home</NavLink></li>
+        <li><NavLink to="/students" className="nav-link">Enroll Student</NavLink></li>
+        <li><NavLink to="/contact" className="nav-link">Contact Us</NavLink></li>
+        <li><NavLink to="/attendance" className="nav-link">Attendance</NavLink></li>
       </ul>
     </div>
   );

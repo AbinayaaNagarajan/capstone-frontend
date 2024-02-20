@@ -15,6 +15,7 @@ const PasswordPrompt = ({ onPasswordSubmit }) => {
   return (
     <div className="password-prompt">
       <form onSubmit={handleFormSubmit}>
+        <h2>Please Enter Password to Enter Attendance Page</h2>
         <label>
           Password:
           <input

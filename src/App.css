@@ -46,7 +46,7 @@ body {
   color: #EAD012;
 }
 
-.sidebar a:active {
+ a.active {
   color: #EAD012;
 }
 
@@ -173,7 +173,8 @@ body {
 
 .news-item p {
   font-size: 16px;
-  color: #333;
+  color: #000;
+  word-wrap: break-word;
 }
 
 /* styles.css */
@@ -268,8 +269,8 @@ body {
   margin-left: 50px;
 }
 .student-item button {
-  background-color: #e74c3c;
-  color: #fff;
+  background-color: #EAD012;
+  color: #000;
   padding: 8px;
   border: none;
   border-radius: 4px;
@@ -277,7 +278,7 @@ body {
 }
 
 .student-item button:hover {
-  background-color: #c0392b;
+  background-color: #4caf50;
 }
 
 /* styles.css */
@@ -289,15 +290,15 @@ body {
 
 .contact-us-page {
   width: 1050px;
-  margin: 0 auto;
   padding: 20px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 8px;
 }
 
 .contact-us-page h2 {
-  color: #fff;
+  color: #000;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Contact Us Form */
@@ -308,7 +309,7 @@ form {
 
 label {
   margin-bottom: 8px;
-  color: #333;
+  color: #000;
 }
 
 input,
@@ -342,6 +343,10 @@ button:hover {
   background-color: #333;
   color: #fff;
   padding: 20px;
+}
+
+.sidebar a:active{
+  color:#EAD012 !important;
 }
 
 /* Signup Page */
@@ -397,8 +402,13 @@ button:hover {
 .content-container {
   flex: 1;
   padding: 20px;
+  background-color: #fff;
+  width:850px;
 }
-
+.content-container h1{
+  color:#000;
+  text-align: center;
+}
 form {
   max-width: 400px;
   margin: auto;
@@ -418,13 +428,93 @@ input {
 }
 
 button {
-  background-color: #4caf50;
-  color: white;
+  background-color: #EAD012 !important;
+  color: #000 !important;
   padding: 10px;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #45a049 !important;
+  color: #fff !important;
+  border: 1px solid #000 !important;
+}
+
+
+
+/*Contact -us*/
+
+/* Add this CSS to your stylesheet or App.css file */
+
+.contact-us-layout {
+  display: flex;
+}
+
+.sidebar {
+  /* Add your sidebar styling here */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.contact-us-page {
+  width: 850px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color:#000;
+}
+
+input,
+textarea {
+  margin-bottom: 16px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.thank-you-message {
+  background-color: #EAD012;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+/*Password Prompt*/
+
+.password-prompt{
+  background-color: #fff;
+  width: 850px;
+  height: 500px;
+  position: relative;
+  left:450px;
+}
+.password-prompt h2{
+  color:#000;
+  width: 850px;
+}
+.password-prompt form{
+  position: absolute;
+  top:100px;
+  left:170px;
 }

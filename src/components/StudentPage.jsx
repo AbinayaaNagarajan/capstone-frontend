@@ -55,7 +55,7 @@ const StudentPage = () => {
 
       {/* Main Content */}
       <div className="content student-page">
-        <h2>Student Page</h2>
+        <h2>Enroll New Student</h2>
 
         {/* Add Student Form */}
         <div className="add-student-form">

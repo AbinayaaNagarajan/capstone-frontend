@@ -33,11 +33,6 @@ class ErrorBoundary extends React.Component {
 }
 
 
-
-
-
-
-
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
