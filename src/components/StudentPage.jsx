@@ -29,8 +29,14 @@ const StudentPage = () => {
     try{
   const response = await Axios.post('https://tutor-student.onrender.com/students/addStudent', newStudent);
   console.log(response);
-  setStudents((prevStudents) => [...prevStudents, response.data]); // Update the students list with the new student
-  setNewStudent({ name: '', grade: '' , batch: ''}); // Clear the input fields
+  setStudents((prevStudents) => [...prevStudents, response.data.student]); // Update the students list with the new student
+   // Clear the input fields
+   setNewStudent((prevNewStudent) => ({
+    ...prevNewStudent,
+    name: '',
+    grade: '',
+    batch: '',
+  }));
     }catch(error){
         console.error('Error adding student:', error);
       }
@@ -94,7 +100,7 @@ const StudentPage = () => {
         <div className="student-list">
           <h3>List of Students</h3>
           <ul>
-            {students.map((student) => (
+            {students.length && students.map((student) => (
               <li key={student._id} className="student-item">
                 <div>
                   <span className="student-name">Name: <i>{student.name}</i></span>
