@@ -28,10 +28,10 @@ This repository contains the frontend code for a Student Management System. The 
 Access the application at http://localhost:5173/ in your web browser.
 
 ## Components
+HomePage.js: Component displaying the home page with a slider, news section, and about me content.
 AboutMe.js: Component displaying information about the user.
 AttendancePage.js: Component for recording attendance.
 ContactUsPage.js: Component for submitting contact forms.
-HomePage.js: Component displaying the home page with a slider, news section, and about me content.
 NewsSection.js: Component displaying the latest news.
 PasswordPrompt.js: Component for entering the password to access restricted pages.
 Sidebar.js: Sidebar navigation component.
