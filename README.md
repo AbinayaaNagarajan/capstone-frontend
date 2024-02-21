@@ -37,3 +37,7 @@ PasswordPrompt.js: Component for entering the password to access restricted page
 Sidebar.js: Sidebar navigation component.
 Slider.js: Slider component for displaying banners.
 StudentPage.js: Component for enrolling students.
+
+##Live Link 
+
+https://legendary-licorice-7d06ec.netlify.app/
