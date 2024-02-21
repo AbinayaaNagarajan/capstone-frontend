@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 
 # Student Management System - Frontend
 
-This repository contains the frontend code for a Student Management System. The frontend is built using React.js and includes various components for different pages such as Home, Student Enrollment, Contact Us, Attendance, etc.
+This repository contains the frontend code for a Student Management System. The frontend is built using React.js and includes various components for different pages such as Home, Student Enrollment, Contact Us, Attendance.
 
 ## Prerequisites
 - Node.js installed
