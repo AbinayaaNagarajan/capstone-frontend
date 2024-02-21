@@ -20,7 +20,7 @@ This repository contains the frontend code for a Student Management System. The 
 - npm install
 - npm run dev
 -react: JavaScript library for building user interfaces.
- -react-router-dom: React library for routing.
+-react-router-dom: React library for routing.
 -axios: HTTP client for making requests to the backend.
 -react-slick: Slider component for React.
   
